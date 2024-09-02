@@ -35,10 +35,64 @@ namespace TARpv23_KirillSats
             else
             {
                 Console.WriteLine("Viga! Tundmatu tehe: " + tehe);
-                return 0; 
+                return 0;
             }
 
-            return tulemus; 
+            return tulemus;
         }
+        //Pinginaabrid #1
+        public static string Naaber(string nimi1, string nimi2)
+        {
+            return "Naaber on " + nimi1 + " ja " + nimi2;
+        }
+
+        //Temperatuur #2
+        public class Funktsioonid
+        {
+            public string Temp(double temperatuur)
+            {
+                if (temperatuur > 18)
+                {
+                    return "Temperatuur on üle kaheksateistkümne kraadi";
+                }
+                else if (temperatuur == 18)
+                {
+
+                    return "Hea temperatuur";
+                }
+                else
+                {
+                    return "Temperatuur on alla kaheksateistkümne kraadi";
+                }
+            }
+        }
+        //Soodushind #3
+        public static double alghind(double praeguneHind, double soodustusProtsent)
+        {
+            // Находим стартовую цену, зная текущую цену и процент скидки
+            double alghind = praeguneHind / (1 - soodustusProtsent / 100);
+            return alghind;
+        }
+
+        //Pikkus #4
+        public static string Pikkuse_analuus(double kasv)
+        {
+            string analuus;
+            if (kasv < 1.6)
+            {
+                analuus = "Lühike kasv";
+                
+            }
+            else if (kasv < 1.8)
+            {
+                analuus = "Pikkus on keskmine.";
+            }
+            else
+            {
+                analuus = "Pikkus on kõrge.";
+            }
+            return analuus;
+        }
+
     }
 }

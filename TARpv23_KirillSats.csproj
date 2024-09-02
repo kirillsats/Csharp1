@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TARpv23_KirillSats.mainclass</StartupObject>
+    <StartupObject>TARpv23_KirillSats.oopClass</StartupObject>
     <ApplicationIcon>currency_dollar_icon_264090.ico</ApplicationIcon>
   </PropertyGroup>
 
