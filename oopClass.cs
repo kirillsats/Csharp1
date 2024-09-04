@@ -11,31 +11,33 @@ namespace TARpv23_KirillSats
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("\n");
-            List<Inimene> inimesed = new List<Inimene>();
-            Inimene inimene1 = new Inimene();
-            inimene1.Nimi = "Pjotr I";
-            inimene1.Vanus = 352;
-            inimene1.Pikkus = 200;
-            inimene1.Kaal = 110;
-            Inimene inimene2 = new Inimene("Jelizaveta");
-            inimene2.Vanus = 98;
-            inimene2.Pikkus = 189;
-            inimene2.Sugu = Sugu.naine;
-            inimene2.Kaal = 70;
-            Inimene inimene3 = new Inimene("Marina", 18, Sugu.naine);
-            inimesed.Add(inimene1);
-            inimesed.Add(inimene2);
-            inimesed.Add(inimene3);
-            inimesed.Add(new Inimene("Irina", 18));
-            foreach (Inimene inemene in inimesed)
-            {
-                Console.WriteLine($"{inemene.Nimi} on " + $"{inemene.Vanus} aastat vana" + $" Ta on {inemene.Sugu}. SBI = {inemene.HB_vorrand()}");
+            /* Console.WriteLine("\n");
+             List<Inimene> inimesed = new List<Inimene>();
+             Inimene inimene1 = new Inimene();
+             inimene1.Nimi = "Pjotr I";
+             inimene1.Vanus = 352;
+             inimene1.Pikkus = 200;
+             inimene1.Kaal = 110;
+             Inimene inimene2 = new Inimene("Jelizaveta");
+             inimene2.Vanus = 98;
+             inimene2.Pikkus = 189;
+             inimene2.Sugu = Sugu.naine;
+             inimene2.Kaal = 70;
 
-            }
+             Inimene inimene3 = new Inimene("Marina", 18, Sugu.naine);
+             inimesed.Add(inimene1);
+             inimesed.Add(inimene2);
+             inimesed.Add(inimene3);
+             inimesed.Add(new Inimene("Irina", 18, Sugu.naine));
+             foreach (Inimene inemene in inimesed)
+             {
+                 Console.WriteLine($"{inemene.Nimi} on " + $"{inemene.Vanus} aastat vana" + $" Ta on {inemene.Sugu}. SBI = {inemene.HB_vorrand()}");
+
+
+             }*/
 
             //Ülesanne 1
-            Console.OutputEncoding = Encoding.UTF8;
+            /*Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("Sisesta numbrid:");
             string numbstr = Console.ReadLine();
             string[] numblist = numbstr.Split(" ");
@@ -60,42 +62,46 @@ namespace TARpv23_KirillSats
             }
             Console.WriteLine("New list of sums:");
             Console.WriteLine(string.Join(", ", newlist));
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
             //ülesanne 2
-            Random random = new Random();
-            int[] numbers = new int[20];
+            /* Random random = new Random();
+             int[] numbers = new int[20];
 
-            
-            for (int i = 0; i < 20; i++)
-            {
-                numbers[i] = random.Next(1, 101); 
-            }
-            //Päärisnumbrid
-            List<int> evenNumbers = numbers.Where(n => n% 2 == 0).ToList();
-            //Paritu numbrid
-            List<int> oddNumbers = numbers.Where(n => n% 2 != 0).ToList();
-            //Uus numekiri, kus kõigepealt lähevad ebaühentlased
-            List<int> sortNumbers = evenNumbers.Concat(oddNumbers).ToList();
 
-            Console.WriteLine("Sorteeritud numbrid: ");
-            sortNumbers.ForEach(n => Console.WriteLine(n + " "));
-            
+             for (int i = 0; i < 20; i++)
+             {
+                 numbers[i] = random.Next(1, 101); 
+             }
+             //Päärisnumbrid
+             List<int> evenNumbers = numbers.Where(n => n% 2 == 0).ToList();
+             //Paritu numbrid
+             List<int> oddNumbers = numbers.Where(n => n% 2 != 0).ToList();
+             //Uus numekiri, kus kõigepealt lähevad ebaühentlased
+             List<int> sortNumbers = evenNumbers.Concat(oddNumbers).ToList();
 
-            
-
-            
-            
-            
+             Console.WriteLine("Sorteeritud numbrid: ");
+             sortNumbers.ForEach(n => Console.WriteLine(n + " "));*/
 
 
 
-            Console.WriteLine("\n");
+            //3 ülesanne failis Inimene
+
+
+
+            //4 ülesanne
+
+
+
+
+
+            //klassitöö
+            /*Console.WriteLine("\n");
             List<Inimene> Inimesed = new List<Inimene>();
             Inimene Inimene1 = new Inimene();
             inimene1.Nimi = "Pjotr I";
@@ -113,7 +119,7 @@ namespace TARpv23_KirillSats
 
             }
 
-            Auto auto1 = new Auto("681MRP", Color.Bisque, inimene1);
+            /*Auto auto1 = new Auto("681MRP", Color.Bisque, inimene1);
             Auto auto2 = new Auto("180ABC", Color.NavajoWhite, inimene2);
             Auto auto3 = new Auto("079TDI", Color.Red, inimene3);
             auto1.KelleOmaAuto();
@@ -129,15 +135,61 @@ namespace TARpv23_KirillSats
             foreach (KeyValuePair<Auto, Inimene> pair in register)
             {
                 Console.WriteLine (pair.Key.Regnumber + "-" + pair.Value.Nimi);
+            }*/
+
+            //ülesanne 4
+            // Словарь для хранения городов и их округов
+            Dictionary<string, string> maakonnad = new Dictionary<string, string>
+            {
+                { "Tallinn", "Harjumaa" },
+                { "Tartu", "Tartumaa" },
+                { "Pärnu", "Pärnumaa" },
+                { "Narva", "Ida-Virumaa" },
+                { "Rakvere", "Lääne-Virumaa" }
+            };
+
+            string valik = "";
+
+            // Основной цикл программы
+            while (valik != "5")
+            {
+                Console.WriteLine("Valige toiming:");
+                Console.WriteLine("1. Näita linna maakonna järgi");
+                Console.WriteLine("2. Näita maakonda linna järgi");
+                Console.WriteLine("3. Lisa uus maakond ja linn");
+                Console.WriteLine("4. Kontrolli teadmisi");
+                Console.WriteLine("5. Välju");
+
+                valik = Console.ReadLine();
+
+                switch (valik)
+                {
+                    case "1":
+                        Maakond.LeiaLinnMaakonnaJargi(maakonnad);
+                        break;
+                    case "2":
+                        Maakond.LeiaMaakondLinnaJargi(maakonnad);
+                        break;
+                    case "3":
+                        Maakond.LisaUusMaakond(maakonnad);
+                        break;
+                    case "4":
+                        Maakond.KontrolliTeadmisi(maakonnad);
+                        break;
+                    case "5":
+                        break;
+                    default:
+                        Console.WriteLine("Vale valik. Proovige uuesti.");
+                        break;
+                }
             }
-
         }
-
-
-
     }
-
-
-
-
 }
+
+
+
+
+
+
+

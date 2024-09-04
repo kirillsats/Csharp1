@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace TARpv23_KirillSats
 {
+    public enum Eluviis
+    {
+        Istuv, Vähene, Mõõdukas, Kõrge, Väga_Kõrge
+    }
+
     public enum Sugu
     {
         mees,
@@ -41,11 +46,12 @@ namespace TARpv23_KirillSats
 
         }
 
+        //3 ülesanne. 
 
-        public double HB_vorran()
+        public double HB_vorrand(Eluviis eluviis = Eluviis.Istuv)
         {
             double SBI = 0;
-            if (SBI == 0)
+            if (Sugu == Sugu.mees)
             {
                 SBI = 66 + (13.7 * Kaal) + (5 * Pikkus) - (6.8 * Vanus);
             }
@@ -53,8 +59,25 @@ namespace TARpv23_KirillSats
             {
                 SBI = 655 + (9.5 * Kaal) + (1.8 * Pikkus) - (4.7 * Vanus);
             }
-            return SBI;
-
+            switch (eluviis)
+            {
+                case Eluviis.Istuv:
+                    SBI = SBI * 1.2;
+                    break;
+                case Eluviis.Vähene:
+                    SBI = SBI * 1.375;
+                    break;
+                case Eluviis.Mõõdukas:
+                    SBI = SBI * 1.55;
+                    break;
+                case Eluviis.Kõrge:
+                    SBI = SBI * 1.725;
+                    break;
+                case Eluviis.Väga_Kõrge:
+                    SBI = SBI * 1.9;
+                    break;
+            }
+            return Math.Round(SBI, 1);
         }
     }
 }

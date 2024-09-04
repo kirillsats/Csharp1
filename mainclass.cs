@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using TARpv23_KirillSats;
 using static TARpv23_KirillSats.funktsioonid;
 
-namespace TARpv23_KirillSatsˇ               //ПРЕЖДЕ ЧЕМ ЗАПУСТИТЬ ОДНО НУЖНО ЗАКОММЕНТИТЬ ОСТАЛЬНОЕ
+namespace TARpv23_KirillSatsˇ               //ПРЕЖДЕ ЧЕМ ЗАПУСТИТЬ ОДНО, НУЖНО ЗАКОММЕНТИТЬ ОСТАЛЬНОЕ
 {
     public class mainclass
     {
